@@ -1,4 +1,4 @@
-Day 03 - Shell (POSIX)
+# Day 03 - Shell (POSIX)
 
 This solution relies on a posix shell (`sh`), along with various Unix utilities
 (`grep`, `sort`, `uniq`, `cat`, `rm`, `expr`, `basename`, `dirname`, `head`).

@@ -1,4 +1,4 @@
-Day 01 - awk
+# Day 01 - awk
 
 This day's solution is an awk program. 
 
@@ -8,3 +8,5 @@ instance, if your input is in "input.txt":
 ```shell
 awk -f solution.awk < input.txt
 ```
+
+It will print the solution to the first part, then the second part.
