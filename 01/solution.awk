@@ -1,0 +1,17 @@
+BEGIN {
+  FUEL=0
+  FUEL2=0
+}
+{
+  WEIGHT=$0
+  FUEL_FOR_WEIGHT=int(WEIGHT / 3) - 2
+  FUEL = FUEL + FUEL_FOR_WEIGHT
+  while (FUEL_FOR_WEIGHT > 0) {
+    FUEL2 = FUEL2 + FUEL_FOR_WEIGHT
+    FUEL_FOR_WEIGHT=int(FUEL_FOR_WEIGHT / 3) - 2
+  }
+}
+END {
+  print FUEL
+  print FUEL2
+}
