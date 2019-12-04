@@ -1,6 +1,6 @@
 # advent_of_code_2019
 
-2019 submissions for the advent of code challenge.
+2019 submissions for the [advent of code challenge](https://adventofcode.com/2019).
 
 This year, I have decided to do each day in a different language:
   - [Day 01](https://github.com/nitnelave/advent_of_code_2019/tree/master/01): Awk
