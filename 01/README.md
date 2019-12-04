@@ -1,6 +1,7 @@
 # Day 01 - awk
 
-This day's solution is an awk program. 
+This day's solution is an awk program. [Awk](https://en.wikipedia.org/wiki/AWK)
+is a line-processing language, typically run by the `awk` command on Unix
 
 Run it with any version of awk, passing your input on the standard input. For
 instance, if your input is in "input.txt":
