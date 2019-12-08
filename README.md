@@ -9,3 +9,5 @@ This year, I have decided to do each day in a different language:
   - [Day 04](https://github.com/nitnelave/advent_of_code_2019/tree/master/04): Prolog
   - [Day 05](https://github.com/nitnelave/advent_of_code_2019/tree/master/05): LOLCODE
   - [Day 06](https://github.com/nitnelave/advent_of_code_2019/tree/master/06): Spreadsheet (Google Sheets, no App Script/VBA)
+  - [Day 07](https://github.com/nitnelave/advent_of_code_2019/tree/master/07): J
+  - [Day 08](https://github.com/nitnelave/advent_of_code_2019/tree/master/08): Brainfuck
