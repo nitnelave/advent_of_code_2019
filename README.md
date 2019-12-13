@@ -14,3 +14,5 @@ This year, I have decided to do each day in a different language:
   - [Day 09](https://github.com/nitnelave/advent_of_code_2019/tree/master/09): Pike
   - Day 10: Plain English (delayed due to technical problems)
   - [Day 11](https://github.com/nitnelave/advent_of_code_2019/tree/master/11): VimScript
+  - Day 12: Forth (coming soon)
+  - [Day 13](https://github.com/nitnelave/advent_of_code_2019/tree/master/13): C
