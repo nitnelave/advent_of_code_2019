@@ -7,10 +7,24 @@ fclose($myfile);
 
 $lines = explode(PHP_EOL, trim($input));
 
+// Parse an ingredient.
+// Input: a string describing the amount of a single ingredient.
+// E.g.: "2 FLKGN"
+// Output: An array with the number as first element and the name as second.
+// E.g.: ["2", "FLKGN"]
 function parse_ingredient($text) {
    return explode(' ', $text);
 }
 
+// Input: "2 FLKGN, 3 ABKN => 7 KNCO"
+// Output:
+// [
+//   "ingr" => [
+//     [ "2", "FLKGN" ],
+//     [ "3", "ABKN" ],
+//   ],
+//   "prod" => [ "7", "KNCO" ]
+// ]
 function parse_formula($line) {
   list($ingredients, $result) = explode(" => ", $line);
   $ingr_list = explode(", ", $ingredients);
@@ -22,6 +36,7 @@ function parse_formula($line) {
   );
 }
 
+// Helper function for topological sort.
 function topo_rec($element, &$formulas, &$seen_elements, &$result_list) {
   if (array_key_exists($element, $seen_elements)) return;
   foreach ($formulas[$element]["ingr"] as $kv) {
@@ -31,6 +46,7 @@ function topo_rec($element, &$formulas, &$seen_elements, &$result_list) {
   array_push($result_list, $element);
 }
 
+// Topological sort.
 function topo_sort(&$formulas) {
   // We represent a set as a map to true.
   $seen_elements = array("ORE" => true);
@@ -70,13 +86,13 @@ function needed_ore($fuel_amount, &$element_order, &$formulas) {
   return $elements_needed[0];
 }
 
-$fuel_for_one = needed_ore(1, $element_order, $formulas);
+$ore_for_one_fuel = needed_ore(1, $element_order, $formulas);
 
-echo "For 1 FUEL: " . $fuel_for_one . "\n";
+echo "For 1 FUEL: " . $ore_for_one_fuel . "\n";
 
 $max_ore = 1000000000000;
 
-$fuel_amount = ceil($max_ore / $fuel_for_one);
+$fuel_amount = ceil($max_ore / $ore_for_one_fuel);
 
 $increment = 1000000;
 while ($increment >= 1) {
